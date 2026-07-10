@@ -1,0 +1,20 @@
+{
+  "name": "chronicle-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Chronicle documentation site (VitePress) — getchronicle.dev",
+  "scripts": {
+    "content": "node scripts/build-content.mjs",
+    "dev": "npm run content && vitepress dev",
+    "build": "npm run content && vitepress build",
+    "preview": "vitepress preview",
+    "predeploy:preview": "npm run content",
+    "deploy:preview": "vercel",
+    "predeploy": "npm run content",
+    "deploy": "vercel --prod"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}
